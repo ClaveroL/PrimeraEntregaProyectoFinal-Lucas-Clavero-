@@ -27,7 +27,7 @@ public class Enemigo1 : MonoBehaviour
         }
         else
         {
-            enemigo.AddForceAtPosition(transform.forward*10-new Vector3(0,10,0),transform.position);
+            enemigo.AddForceAtPosition(transform.forward*8-new Vector3(0,10,0),transform.position);
         }
     }
     void OnCollisionEnter(Collision Ataque1)
@@ -35,7 +35,7 @@ public class Enemigo1 : MonoBehaviour
         if (Ataque1.transform.gameObject.tag == "Player1")
         {
             GameObject Playertarget = Ataque1.transform.gameObject;
-            Playertarget.GetComponent<Rigidbody>().AddExplosionForce(20000, transform.position, 2);
+            Playertarget.GetComponent<Rigidbody>().AddExplosionForce(15000, transform.position, 2);
         }
     }
 }

@@ -213,7 +213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9322acff277ed14d9de8d545980d8e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Playerpos: {fileID: 0}
+  Playerpos: {fileID: 5777608797515106792, guid: 70a08fac08bf5e84487ff1901630b663, type: 3}
   enemigo: {fileID: 8590055990455012767}
 --- !u!54 &8590055990455012767
 Rigidbody:

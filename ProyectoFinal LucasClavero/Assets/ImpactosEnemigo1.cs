@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ImpactosEnemigo1 : MonoBehaviour
 {
-    private int vida = 15;
+    public int vida = 15;
     public GameObject bien;
     public GameObject masomenos;
     public GameObject mal;
@@ -20,6 +20,17 @@ public class ImpactosEnemigo1 : MonoBehaviour
         {
             vida--;
         }
+    }
+
+    private void Update()
+    {
+        if (vida > 10)
+        {
+            gameObject.tag = "JugadorSano";
+            bien.SetActive(true);
+            masomenos.SetActive(false);
+            mal.SetActive(false);
+        }
         if (vida < 10)
         {
             gameObject.tag = "JugadorHerido";
@@ -34,6 +45,5 @@ public class ImpactosEnemigo1 : MonoBehaviour
             masomenos.SetActive(false);
             mal.SetActive(true);
         }
-        Debug.Log(vida);
     }
 }

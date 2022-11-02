@@ -8,10 +8,12 @@ public class Enemigo1 : MonoBehaviour
 {
     public Transform Playerpos;
     public Rigidbody enemigo;
+    public GameObject Alerta;
     void Update()
     {  
      FollowPlayer();
      LookAtPlayer();
+     Advertencia();
     }
     void LookAtPlayer()
     {
@@ -36,6 +38,18 @@ public class Enemigo1 : MonoBehaviour
         {
             GameObject Playertarget = Ataque1.transform.gameObject;
             Playertarget.GetComponent<Rigidbody>().AddExplosionForce(15000, transform.position, 2);
+        }
+    }
+    void Advertencia()
+    {
+        int sinvida = gameObject.GetComponent<Vidas>().vidas;
+        if (sinvida <= 0) 
+        {
+            Alerta.SetActive(true);
+        }
+        else 
+        {
+            Alerta.SetActive(false);
         }
     }
 }

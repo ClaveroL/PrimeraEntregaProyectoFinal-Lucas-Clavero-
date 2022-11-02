@@ -4,16 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Plataforma
-  - Pesado
-  - Mediano
   - Liviano
   - Bala
-  - JugadorSano
-  - JugadorHerido
-  - JugadorMuyHerido
   - Player1
-  - Enemy
+  - Enemigo
   layers:
   - Default
   - TransparentFX

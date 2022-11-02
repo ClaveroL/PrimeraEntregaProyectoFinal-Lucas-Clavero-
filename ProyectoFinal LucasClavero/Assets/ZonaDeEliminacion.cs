@@ -17,7 +17,7 @@ public class ZonaDeEliminacion : MonoBehaviour
     }
     void OnTriggerEnter(Collider Zona)
     {
-        if (Zona.transform.gameObject.name == "Player1")
+        if (Zona.transform.gameObject.tag == "Player1")
         {
             GameObject A1 = Zona.transform.gameObject;
             A1.transform.position = new Vector3(0, 0, 0);
@@ -25,11 +25,10 @@ public class ZonaDeEliminacion : MonoBehaviour
             Debug.Log(Team2Points);
         }
 
-        if (Zona.transform.gameObject.name == "Enemigo1")
+        if (Zona.transform.gameObject.tag == "Enemigo")
         {
             GameObject B1 = Zona.transform.gameObject;
             B1.transform.position = new Vector3(0, 0, 0);
-            B1.GetComponent<ImpactosEnemigo1>().vida = 15;
             Team1Points++;
             Debug.Log(Team1Points);
         }

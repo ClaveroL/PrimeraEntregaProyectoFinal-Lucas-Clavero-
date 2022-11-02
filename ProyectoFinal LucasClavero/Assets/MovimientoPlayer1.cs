@@ -5,6 +5,7 @@ using UnityEngine;
 public class MovimientoPlayer1 : MonoBehaviour
 {
     public Rigidbody RbPlayer;
+    public float movimiento;
   
     void Start()
     {
@@ -19,7 +20,7 @@ public class MovimientoPlayer1 : MonoBehaviour
     {
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
-        RbPlayer.AddForce(x*15,0,z*15);
+        RbPlayer.AddForce(x*movimiento,0,z*movimiento);
      if(x > 0)
       {
          transform.rotation = Quaternion.Euler(0,90,0);

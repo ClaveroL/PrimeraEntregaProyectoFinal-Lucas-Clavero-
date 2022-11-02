@@ -24,8 +24,9 @@ public class InstanciarBalas : MonoBehaviour
         {
             GameObject Bala = Instantiate(proyectil, Lanzadera.position, Lanzadera.rotation);
             Bala.GetComponent<Rigidbody>().AddForce(Lanzadera.forward * fuerza, ForceMode.Impulse);
-            Destroy(Bala,10);
+            Destroy(Bala, 10);
         }
         
     }
+
 }

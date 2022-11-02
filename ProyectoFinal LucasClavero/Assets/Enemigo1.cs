@@ -27,7 +27,7 @@ public class Enemigo1 : MonoBehaviour
         }
         else
         {
-            enemigo.AddForceAtPosition(transform.forward*10,transform.position);
+            enemigo.AddForceAtPosition(transform.forward*10-new Vector3(0,10,0),transform.position);
         }
     }
     void OnCollisionEnter(Collision Ataque1)

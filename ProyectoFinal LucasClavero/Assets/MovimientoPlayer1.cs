@@ -5,7 +5,7 @@ using UnityEngine;
 public class MovimientoPlayer1 : MonoBehaviour
 {
     public Rigidbody RbPlayer;
-    public float movimiento = 0f;
+  
     void Start()
     {
         

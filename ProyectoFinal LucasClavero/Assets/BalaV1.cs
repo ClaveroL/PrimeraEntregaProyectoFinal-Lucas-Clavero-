@@ -16,12 +16,16 @@ public class BalaV1 : MonoBehaviour
                 Debug.Log(totaldevidas);
                 if (totaldevidas > 0)
                 {
-                    target.GetComponent<Rigidbody>().AddExplosionForce(10000 / totaldevidas, transform.position, 1);
+                    target.GetComponent<Rigidbody>().AddForceAtPosition(transform.forward * 1000/totaldevidas, target.transform.position, ForceMode.Impulse);
                 }
                 else
                 {
-                    target.GetComponent<Rigidbody>().AddExplosionForce(10000, transform.position, 1);
+                    target.GetComponent<Rigidbody>().AddForceAtPosition(transform.forward * 1000, target.transform.position, ForceMode.Impulse);
                 }
+            }
+            if (Detect.transform.gameObject.tag == "Estructura") 
+            {
+                target.GetComponent<Rigidbody>().AddForceAtPosition(transform.forward*1000,target.transform.position, ForceMode.Impulse);
             }
         }
         Destroy(gameObject);

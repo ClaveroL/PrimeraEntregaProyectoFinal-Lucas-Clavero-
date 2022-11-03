@@ -9,6 +9,7 @@ public class Enemigo1 : MonoBehaviour
     public Transform Playerpos;
     public Rigidbody enemigo;
     public GameObject Alerta;
+    public float speed;
     void Update()
     {  
      FollowPlayer();
@@ -29,7 +30,7 @@ public class Enemigo1 : MonoBehaviour
         }
         else
         {
-            enemigo.AddForceAtPosition(transform.forward*8-new Vector3(0,10,0),transform.position);
+            enemigo.AddForceAtPosition(transform.forward*speed-new Vector3(0,speed+3,0),transform.position);
         }
     }
     void OnCollisionEnter(Collision Ataque1)

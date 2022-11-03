@@ -32,5 +32,12 @@ public class ZonaDeEliminacion : MonoBehaviour
             Team1Points++;
             Debug.Log(Team1Points);
         }
+
+        if (Zona.transform.gameObject.tag == "Estructura") 
+        {
+            GameObject C1 = Zona.transform.gameObject;
+            Destroy(C1);
+        }
+
     }
 }

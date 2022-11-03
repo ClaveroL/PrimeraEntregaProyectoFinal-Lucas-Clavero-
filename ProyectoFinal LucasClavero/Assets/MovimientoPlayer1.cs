@@ -53,7 +53,7 @@ public class MovimientoPlayer1 : MonoBehaviour
         {
             transform.rotation = Quaternion.Euler(0, 135, 0);
         }
-        if (Physics.Raycast(transform.position,Vector3.down, 1f))
+        if (Physics.Raycast(transform.position,Vector3.down, 1.5f))
         {
             Floor = true;
             Cooldown -= Time.deltaTime;

@@ -25,7 +25,7 @@ public class BalaV1 : MonoBehaviour
             }
             if (Detect.transform.gameObject.tag == "Estructura") 
             {
-                target.GetComponent<Rigidbody>().AddExplosionForce(1000, transform.position, 1);
+                target.GetComponent<Rigidbody>().AddForceAtPosition(transform.forward * 100, target.transform.position, ForceMode.Impulse);
             }
         }
         Destroy(gameObject);

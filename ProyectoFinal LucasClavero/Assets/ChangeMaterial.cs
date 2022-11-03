@@ -19,7 +19,7 @@ public class ChangeMaterial : MonoBehaviour
     void SeRompio() 
     {
         int totaldevidas = gameObject.GetComponent<Vidas>().vidas;
-        if(totaldevidas < 0)
+        if(totaldevidas <= 0)
         rend.sharedMaterial = roto;
     }
 }

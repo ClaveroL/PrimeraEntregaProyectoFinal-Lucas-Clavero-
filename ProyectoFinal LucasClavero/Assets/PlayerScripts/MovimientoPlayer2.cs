@@ -98,13 +98,11 @@ public class MovimientoPlayer2 : MonoBehaviour
             Floor = false;
             Speedmovimiento = 70;
         }
-        if (Floor == true && Input.GetKey(KeyCode.X) && Cooldown < 0)
+        if (Floor == true && Input.GetKey(KeyCode.Keypad0) && Cooldown < 0)
         {
             RbPlayer.AddForceAtPosition(Vector3.up * JumpForce, transform.position, ForceMode.Impulse);
             Cooldown = 0.2f;
         }
-
-        Debug.Log(Speedmovimiento);
     }
 }
 

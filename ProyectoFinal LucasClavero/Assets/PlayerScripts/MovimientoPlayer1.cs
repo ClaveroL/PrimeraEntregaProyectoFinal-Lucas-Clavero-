@@ -67,7 +67,5 @@ public class MovimientoPlayer1 : MonoBehaviour
             RbPlayer.AddForceAtPosition(Vector3.up * JumpForce, transform.position, ForceMode.Impulse);
             Cooldown = 0.2f;
         }
-
-        Debug.Log(Speedmovimiento);
     }
 }

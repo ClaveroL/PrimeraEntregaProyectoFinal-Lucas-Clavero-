@@ -7,6 +7,8 @@ public class ZonaDeEliminacion : MonoBehaviour
 {
     public int Team1Points = 0;
     public int Team2Points = 0;
+    public GameObject SpawnTeam1;
+    public GameObject SpawnTeam2;
     void Start()
     {
         
@@ -19,11 +21,21 @@ public class ZonaDeEliminacion : MonoBehaviour
     {
         if (Zona.transform.gameObject.tag == "Player1")
         {
-            GameObject A1 = Zona.transform.gameObject;
-            A1.transform.position = new Vector3(0, 0, 0);
-            Team2Points++;
-            Debug.Log(Team2Points);
+            GameObject Player1 = Zona.transform.gameObject;
+            Player1.transform.position = SpawnTeam1.transform.position;
+            Player1.GetComponent<MuerteRespawn>().PuntosTeam2++;
+            int a = Player1.GetComponent<MuerteRespawn>().PuntosTeam2++;
+            Debug.Log("Puntos TeamAzul = " + a);
         }
+        if (Zona.transform.gameObject.tag == "Player2")
+        {
+            GameObject Player2 = Zona.transform.gameObject;
+            Player2.transform.position = SpawnTeam2.transform.position;
+            Player2.GetComponent<MuerteRespawn>().PuntosTeam1++;
+            int a = Player2.GetComponent<MuerteRespawn>().PuntosTeam1++;
+            Debug.Log("Puntos TeamRojo = " + a);
+        }
+
 
         if (Zona.transform.gameObject.tag == "Enemigo")
         {

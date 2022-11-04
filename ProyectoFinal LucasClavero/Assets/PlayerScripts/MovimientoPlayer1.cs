@@ -53,7 +53,7 @@ public class MovimientoPlayer1 : MonoBehaviour
         {
             transform.rotation = Quaternion.Euler(0, 135, 0);
         }
-        if (Physics.Raycast(transform.position,Vector3.down, 3f))
+        if (Physics.Raycast(transform.position,Vector3.down, 1f))
         {
             Floor = true;
             Cooldown -= Time.deltaTime;
@@ -68,7 +68,7 @@ public class MovimientoPlayer1 : MonoBehaviour
         if(Floor == true && Input.GetKey(KeyCode.X) && Cooldown < 0) 
         {
             RbPlayer.AddForceAtPosition(Vector3.up * JumpForce, transform.position, ForceMode.Impulse);
-            Cooldown = 0.1f;
+            Cooldown = 0.2f;
         }
 
         Debug.Log(Speedmovimiento);

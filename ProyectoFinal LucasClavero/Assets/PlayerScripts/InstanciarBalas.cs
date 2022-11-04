@@ -21,7 +21,7 @@ public class InstanciarBalas : MonoBehaviour
     void InstaciarBalas()
     {
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.L))
         {
             GameObject Bala = Instantiate(proyectil, Lanzadera.position, Lanzadera.rotation);
             Bala.GetComponent<Rigidbody>().AddForce(Lanzadera.forward * fuerza, ForceMode.Impulse);

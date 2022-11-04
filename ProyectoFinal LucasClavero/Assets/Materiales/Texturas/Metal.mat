@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Arbol
+  m_Name: Metal
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ValidKeywords:
   - _NORMALMAP
@@ -22,7 +22,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: dbfa322a9a382b34eb0f28e4f9a5083d, type: 3}
+        m_Texture: {fileID: 2800000, guid: eec2cb8e7739c114e8bd6cefe7a93a65, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -42,7 +42,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 863a2318a439b9142a73b7cd3a3eab64, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -64,9 +64,9 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _GlossMapScale: 1
-    - _Glossiness: 0.268
+    - _Glossiness: 0.505
     - _GlossyReflections: 1
-    - _Metallic: 0.176
+    - _Metallic: 0.641
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
@@ -76,6 +76,6 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.5188679, g: 0.3390291, b: 0.24719651, a: 1}
+    - _Color: {r: 0.33962262, g: 0.33962262, b: 0.33962262, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []

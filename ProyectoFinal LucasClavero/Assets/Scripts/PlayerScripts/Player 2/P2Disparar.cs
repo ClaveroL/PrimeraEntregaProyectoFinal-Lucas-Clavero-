@@ -5,11 +5,20 @@ using UnityEngine;
 public class P2Disparar : MonoBehaviour
 {
     public GameObject proyectil;
+    public Animator Anim;
     public Transform Lanzadera;
     public float fuerza;
     void Update()
     {
         InstaciarBalas();
+        if (Input.GetKeyDown(KeyCode.Keypad1))
+        {
+            Anim.SetBool("Disparo", true);
+        }
+        else
+        {
+            Anim.SetBool("Disparo", false);
+        }
     }
 
     void InstaciarBalas()

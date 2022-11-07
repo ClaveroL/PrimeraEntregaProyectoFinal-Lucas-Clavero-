@@ -7,15 +7,18 @@ public class InstanciarBalas : MonoBehaviour
     public GameObject proyectil;
     public Transform Lanzadera;
     public float fuerza;
-
-  
-    void Start()
-    {
-   
-    }
+    public Animator Anim;
     void Update()
     {
         InstaciarBalas();
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            Anim.SetBool("Disparo", true);
+        }
+        else
+        {
+            Anim.SetBool("Disparo", false);
+        }
     }
 
     void InstaciarBalas()

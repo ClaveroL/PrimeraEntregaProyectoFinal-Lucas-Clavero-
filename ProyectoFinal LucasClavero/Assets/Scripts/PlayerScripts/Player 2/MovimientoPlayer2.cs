@@ -3,6 +3,7 @@ using UnityEngine;
 public class MovimientoPlayer2 : MonoBehaviour
 {
     public Rigidbody RbPlayer;
+    public Animator Anim;
     float Speedmovimiento;
     public float JumpForce;
     bool Floor = false;
@@ -11,7 +12,20 @@ public class MovimientoPlayer2 : MonoBehaviour
     float right;
     float top;
     float bottom;
+    float AnimX = 0f;
+    float AnimZ = 0f;
 
+    private void Update()
+    {
+        if (AnimX * AnimX + AnimZ * AnimZ > 0)
+        {
+            Anim.SetBool("Movimiento", true);
+        }
+        else
+        {
+            Anim.SetBool("Movimiento", false);
+        }
+    }
     void FixedUpdate()
     {
         MovimientoPlayer();
@@ -52,7 +66,9 @@ public class MovimientoPlayer2 : MonoBehaviour
             bottom = 0;
         }
         float x = left + right;
-        float z = top+ bottom;
+        AnimX = x;
+        float z = top + bottom;
+        AnimZ = z;
         RbPlayer.AddForce(x * Speedmovimiento, 0, z * Speedmovimiento);
         if (x > 0)
         {

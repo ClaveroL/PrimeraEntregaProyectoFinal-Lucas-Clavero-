@@ -3,10 +3,28 @@ using UnityEngine;
 public class MovimientoPlayer1 : MonoBehaviour
 {
     public Rigidbody RbPlayer;
+    public Animator Anim;
     float Speedmovimiento;
     public float JumpForce;
     bool Floor = false;
+    
     float Cooldown = 0f;
+    float AnimX = 0f;
+    float AnimZ = 0f;
+
+
+    private void Update()
+    {
+        if (AnimX*AnimX + AnimZ*AnimZ > 0) 
+        {
+            Anim.SetBool("Movimiento", true);
+        }
+        else 
+        {
+            Anim.SetBool("Movimiento", false);
+        }
+
+    }
 
     void FixedUpdate()
     {
@@ -16,7 +34,9 @@ public class MovimientoPlayer1 : MonoBehaviour
     void MovimientoPlayer() 
     {
         float x = Input.GetAxis("Horizontal");
+        AnimX = x;
         float z = Input.GetAxis("Vertical");
+        AnimZ = z;
         RbPlayer.AddForce(x * Speedmovimiento, 0, z * Speedmovimiento);
         if (x > 0)
         {

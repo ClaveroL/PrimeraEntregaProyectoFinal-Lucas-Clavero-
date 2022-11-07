@@ -9,6 +9,10 @@ public class MuerteRespawn : MonoBehaviour
     public int Team;
     public int PuntosTeam1;
     public int PuntosTeam2;
+    private void Start()
+    {
+        transform.position = RespawPoint.transform.position;
+    }
     void Update()
     {
         SeMurio();

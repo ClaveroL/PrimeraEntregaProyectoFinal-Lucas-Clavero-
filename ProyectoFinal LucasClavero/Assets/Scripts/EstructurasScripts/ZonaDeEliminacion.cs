@@ -24,16 +24,18 @@ public class ZonaDeEliminacion : MonoBehaviour
             GameObject Player1 = Zona.transform.gameObject;
             Player1.transform.position = SpawnTeam1.transform.position;
             Player1.GetComponent<MuerteRespawn>().PuntosTeam2++;
-            int a = Player1.GetComponent<MuerteRespawn>().PuntosTeam2++;
+            int a = Player1.GetComponent<MuerteRespawn>().PuntosTeam2;
             Debug.Log("Puntos TeamAzul = " + a);
+
+
         }
         if (Zona.transform.gameObject.tag == "Player2")
         {
             GameObject Player2 = Zona.transform.gameObject;
             Player2.transform.position = SpawnTeam2.transform.position;
             Player2.GetComponent<MuerteRespawn>().PuntosTeam1++;
-            int a = Player2.GetComponent<MuerteRespawn>().PuntosTeam1++;
-            Debug.Log("Puntos TeamRojo = " + a);
+            int b = Player2.GetComponent<MuerteRespawn>().PuntosTeam1;
+            Debug.Log("Puntos TeamRojo = " + b);
         }
 
 
